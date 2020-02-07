@@ -14,16 +14,5 @@ button {
   margin-bottom: 60px;
 }
 
-body{
-  background-image: url('../../img/faclon.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-h1{
-  color:yellow;
-}
-h2{
-  color:green;
-}
 /*# sourceMappingURL=style.css.map */
