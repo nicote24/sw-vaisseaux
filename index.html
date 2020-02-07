@@ -5,111 +5,81 @@
     <title>SW Vaisseaux</title>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
+
   </head>
   <body>
     <!-- page content -->
-	<h1>Générateur de vaisseaux Star Wars</h1>
-	
-	<button>Générer un nouveau vaisseau</button>
-	
+	<h1 class="row justify-content-center" >Générateur de vaisseaux Star Wars</h1>
+    <div class="row justify-content-center">
+	<button type="button" class="btn btn-primary " id="btn">Générer un nouveau vaisseau</button>
+    </div>
+    <div  role="alert" id="alert" >
+    </div>
+    <div class="row justify-content-center" id="contSpinner">
+    </div>
 	<!-- Exemple avec le vaisseau #10 -->
 	<!-- https://swapi.co/api/starships/10/ -->
-	<h2>Informations</h2>
-	<table>
-		<tr>
-			<th>Nom</td>
-			<td>Millenium Falcon</td>
-		</tr>
-		<tr>
-			<th>Modèle</td>
-			<td>YT-1300 light freighter</td>
-		</tr>
-		<tr>
-			<th>Classe</td>
-			<td>Light freighter</td>
-		</tr>
-		<tr>
-			<th>Fabricant</td>
-			<td>Corellian Engineering Corporation</td>
-		</tr>
-		<tr>
-			<th>Coût (en crédits)</td>
-			<td>100000</td>
-		</tr>
-		<tr>
-			<th>Taille (en mètres)</td>
-			<td>34.37</td>
-		</tr>
-		<tr>
-			<th>Nombre de membres de l'équipage</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<th>Nombre de passagers</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<th>Capacité de chargement maximale (en kg)</td>
-			<td>100000</td>
-		</tr>
-	</table>
+	<div class="container-fluid ">
+	<h2 class="row justify-content-center">Informations</h2>
+		<div class="row justify-content-center">
+			<table class="table table-striped table-dark col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<tr>
+					<th>Nom</th>
+					<td id="nomShip">Millenium Falcon</td>
+				</tr>
+				<tr>
+					<th>Modèle</th>
+					<td id="modShip">YT-1300 light freighter</td>
+				</tr>
+				<tr>
+					<th>Classe</th>
+					<td id="classShip">Light freighter</td>
+				</tr>
+				<tr>
+					<th>Fabricant</th>
+					<td id="fabShip">Corellian Engineering Corporation</td>
+				</tr>
+				<tr>
+					<th>Coût (en crédits)</th>
+					<td id="coutShip">100000</td>
+				</tr>
+				<tr>
+					<th>Taille (en mètres)</th>
+					<td id="tailleShip">34.37</td>
+				</tr>
+				<tr>
+					<th>Nombre de membres de l'équipage</th>
+					<td id="nbMem">4</td>
+				</tr>
+				<tr>
+					<th>Nombre de passagers</th>
+					<td id="nbPass">6</td>
+				</tr>
+				<tr>
+					<th>Capacité de chargement maximale (en kg)</th>
+					<td id="capMax">100000</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<h2 class="row justify-content-center">Pilotes</h2>
+        <div class="row justify-content-center">
+            <table class="table table-striped table-dark col-lg-8 col-md-8 col-sm-12 col-xs-12" id="tablePerso">
+            </table>
+        </div>
+	</div>
+
+	<div class="container-fluid">
+		<h2 class="row justify-content-center">Films</h2>
+        <div class="row justify-content-center">
+            <table id="tableFilm" class="table table-striped table-dark col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            </table>
+        </div>
+	</div>
 	
-	
-	<h2>Pilotes</h2>
-	<table>
-		<tr>
-			<th>Nom</th>
-			<th>Genre</th>
-		</tr>
-		<tr>
-			<td>Chewbacca</td>
-			<td>male</td>
-		</tr>
-		<tr>
-			<td>Han Solo</td>
-			<td>male</td>
-		</tr>
-		<tr>
-			<td>Lando Calrissian</td>
-			<td>male</td>
-		</tr>
-		<tr>
-			<td>Nien Nunb</td>
-			<td>male</td>
-		</tr>
-	</table>
-	
-	<h2>Films</h2>
-	<table>
-		<tr>
-			<th>Titre</th>
-			<th>Directeur</th>
-			<th>Date de sortie</th>
-		</tr>
-		<tr>
-			<td>The Empire Strikes Back</td>
-			<td>Irvin Kershner</td>
-			<td>1980-05-17</td>
-		</tr>
-		<tr>
-			<td>The Force Awaken</td>
-			<td>J. J. Abrams</td>
-			<td>2015-12-11</td>
-		</tr>
-		<tr>
-			<td>Return of the Jedi</td>
-			<td>Richard Marquand</td>
-			<td>1983-05-25</td>
-		</tr>
-		<tr>
-			<td>A New Hope</td>
-			<td>George Lucas</td>
-			<td>1977-05-25</td>
-		</tr>
-	</table>
-	
-	
-	
+	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<!-- scripts -->
 	<script src="static/js/script.js"></script>
   </body>
